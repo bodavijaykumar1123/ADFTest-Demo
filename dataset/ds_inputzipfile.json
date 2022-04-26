@@ -1,0 +1,25 @@
+{
+	"name": "ds_inputzipfile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_azure_blob_001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "business-price-indexes-december-2021-quarter-csv.zip",
+				"container": "raw"
+			},
+			"columnDelimiter": ",",
+			"compressionCodec": "ZipDeflate",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

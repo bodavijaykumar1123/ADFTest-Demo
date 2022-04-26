@@ -1,0 +1,289 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_azure_blob_001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "BoomerWedding_Events_Init_20220118000111.txt",
+				"container": "raw"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "TranType",
+				"type": "String"
+			},
+			{
+				"name": "TrnDttm",
+				"type": "String"
+			},
+			{
+				"name": "InsertDttm",
+				"type": "String"
+			},
+			{
+				"name": "SeqNo",
+				"type": "String"
+			},
+			{
+				"name": "Source_ID",
+				"type": "String"
+			},
+			{
+				"name": "EventID",
+				"type": "String"
+			},
+			{
+				"name": "StoreID",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Description",
+				"type": "String"
+			},
+			{
+				"name": "ShowAcronym",
+				"type": "String"
+			},
+			{
+				"name": "VenueID",
+				"type": "String"
+			},
+			{
+				"name": "ExternalShowCode1",
+				"type": "String"
+			},
+			{
+				"name": "ExternalShowCode2",
+				"type": "String"
+			},
+			{
+				"name": "ExternalShowCode3",
+				"type": "String"
+			},
+			{
+				"name": "StartDate",
+				"type": "String"
+			},
+			{
+				"name": "EndDate",
+				"type": "String"
+			},
+			{
+				"name": "ShowStartDate",
+				"type": "String"
+			},
+			{
+				"name": "ShowEndDate",
+				"type": "String"
+			},
+			{
+				"name": "DiscountStartDate",
+				"type": "String"
+			},
+			{
+				"name": "DiscountEndDate",
+				"type": "String"
+			},
+			{
+				"name": "MoveInDate",
+				"type": "String"
+			},
+			{
+				"name": "MoveOutDate",
+				"type": "String"
+			},
+			{
+				"name": "OrdersNeedApprovalDate",
+				"type": "String"
+			},
+			{
+				"name": "OrderLockDownDate",
+				"type": "String"
+			},
+			{
+				"name": "LogoPictureID",
+				"type": "String"
+			},
+			{
+				"name": "AccessCode",
+				"type": "String"
+			},
+			{
+				"name": "Area",
+				"type": "String"
+			},
+			{
+				"name": "Attendance",
+				"type": "String"
+			},
+			{
+				"name": "BoothCount",
+				"type": "String"
+			},
+			{
+				"name": "SalesMgrID",
+				"type": "String"
+			},
+			{
+				"name": "CateringMgrID",
+				"type": "String"
+			},
+			{
+				"name": "ServiceMgrID",
+				"type": "String"
+			},
+			{
+				"name": "GSCID",
+				"type": "String"
+			},
+			{
+				"name": "WebSiteURL",
+				"type": "String"
+			},
+			{
+				"name": "IsPublished",
+				"type": "String"
+			},
+			{
+				"name": "IsDeleted",
+				"type": "String"
+			},
+			{
+				"name": "CreatedOn",
+				"type": "String"
+			},
+			{
+				"name": "CreatedBy",
+				"type": "String"
+			},
+			{
+				"name": "ModifiedOn",
+				"type": "String"
+			},
+			{
+				"name": "ModifiedBy",
+				"type": "String"
+			},
+			{
+				"name": "IsClosed",
+				"type": "String"
+			},
+			{
+				"name": "StoreMessage",
+				"type": "String"
+			},
+			{
+				"name": "EventType",
+				"type": "String"
+			},
+			{
+				"name": "AccountOrganizationID",
+				"type": "String"
+			},
+			{
+				"name": "MainContactID",
+				"type": "String"
+			},
+			{
+				"name": "AdvanceReceivingEndDate",
+				"type": "String"
+			},
+			{
+				"name": "AdvanceFreightAddress",
+				"type": "String"
+			},
+			{
+				"name": "DirectFreightAddress",
+				"type": "String"
+			},
+			{
+				"name": "AdvanceReceivingStartDate",
+				"type": "String"
+			},
+			{
+				"name": "DirectReceivingStartDate",
+				"type": "String"
+			},
+			{
+				"name": "DirectReceivingEndDate",
+				"type": "String"
+			},
+			{
+				"name": "NetSqFt",
+				"type": "String"
+			},
+			{
+				"name": "GrossSqFt",
+				"type": "String"
+			},
+			{
+				"name": "ExhibitorServiceMgrID",
+				"type": "String"
+			},
+			{
+				"name": "CommonEventCode",
+				"type": "String"
+			},
+			{
+				"name": "ShowAdvancePriceDiscounts",
+				"type": "String"
+			},
+			{
+				"name": "ContractorMoveInDate",
+				"type": "String"
+			},
+			{
+				"name": "ContractorMoveOutDate",
+				"type": "String"
+			},
+			{
+				"name": "AllowSplitOverrideInOrder",
+				"type": "String"
+			},
+			{
+				"name": "AllowEntryOrderDeliveryTimeframe",
+				"type": "String"
+			},
+			{
+				"name": "AdminLockDownDate",
+				"type": "String"
+			},
+			{
+				"name": "AllowEntryOrderPickupTimeframe",
+				"type": "String"
+			},
+			{
+				"name": "ExhibitorKitLink",
+				"type": "String"
+			},
+			{
+				"name": "AllowCustomerCheckoutWithoutPaying",
+				"type": "String"
+			},
+			{
+				"name": "CarrierMoveOutDeadline",
+				"type": "String"
+			},
+			{
+				"name": "ShowBillOfLading",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

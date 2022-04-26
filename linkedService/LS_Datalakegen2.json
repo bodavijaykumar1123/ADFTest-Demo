@@ -1,0 +1,15 @@
+{
+	"name": "LS_Datalakegen2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://azuredatalakegen2mar25.dfs.core.windows.net",
+			"credential": {
+				"referenceName": "credential1",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "ds_HTTPDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_HTTPConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "suresh12345/AzureDataEngineering_Batch/main/ecdc_data/cases_deaths.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

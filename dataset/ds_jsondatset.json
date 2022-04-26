@@ -1,0 +1,20 @@
+{
+	"name": "ds_jsondatset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Azure_gen2_001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "JSONData",
+				"fileSystem": "refined"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

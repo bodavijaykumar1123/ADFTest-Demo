@@ -1,0 +1,114 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText2",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_output",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          TranType as string,",
+				"          TrnDttm as string,",
+				"          InsertDttm as string,",
+				"          SeqNo as string,",
+				"          Source_ID as string,",
+				"          EventID as string,",
+				"          StoreID as string,",
+				"          Name as string,",
+				"          Description as string,",
+				"          ShowAcronym as string,",
+				"          VenueID as string,",
+				"          ExternalShowCode1 as string,",
+				"          ExternalShowCode2 as string,",
+				"          ExternalShowCode3 as string,",
+				"          StartDate as string,",
+				"          EndDate as string,",
+				"          ShowStartDate as string,",
+				"          ShowEndDate as string,",
+				"          DiscountStartDate as string,",
+				"          DiscountEndDate as string,",
+				"          MoveInDate as string,",
+				"          MoveOutDate as string,",
+				"          OrdersNeedApprovalDate as string,",
+				"          OrderLockDownDate as string,",
+				"          LogoPictureID as string,",
+				"          AccessCode as string,",
+				"          Area as string,",
+				"          Attendance as string,",
+				"          BoothCount as string,",
+				"          SalesMgrID as string,",
+				"          CateringMgrID as string,",
+				"          ServiceMgrID as string,",
+				"          GSCID as string,",
+				"          WebSiteURL as string,",
+				"          IsPublished as string,",
+				"          IsDeleted as string,",
+				"          CreatedOn as string,",
+				"          CreatedBy as string,",
+				"          ModifiedOn as string,",
+				"          ModifiedBy as string,",
+				"          IsClosed as string,",
+				"          StoreMessage as string,",
+				"          EventType as string,",
+				"          AccountOrganizationID as string,",
+				"          MainContactID as string,",
+				"          AdvanceReceivingEndDate as string,",
+				"          AdvanceFreightAddress as string,",
+				"          DirectFreightAddress as string,",
+				"          AdvanceReceivingStartDate as string,",
+				"          DirectReceivingStartDate as string,",
+				"          DirectReceivingEndDate as string,",
+				"          NetSqFt as string,",
+				"          GrossSqFt as string,",
+				"          ExhibitorServiceMgrID as string,",
+				"          CommonEventCode as string,",
+				"          ShowAdvancePriceDiscounts as string,",
+				"          ContractorMoveInDate as string,",
+				"          ContractorMoveOutDate as string,",
+				"          AllowSplitOverrideInOrder as string,",
+				"          AllowEntryOrderDeliveryTimeframe as string,",
+				"          AdminLockDownDate as string,",
+				"          AllowEntryOrderPickupTimeframe as string,",
+				"          ExhibitorKitLink as string,",
+				"          AllowCustomerCheckoutWithoutPaying as string,",
+				"          CarrierMoveOutDeadline as string,",
+				"          ShowBillOfLading as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 derive(Name = left(Name, 99)) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     partitionFileNames:['test.csv'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> sink1"
+			]
+		}
+	}
+}

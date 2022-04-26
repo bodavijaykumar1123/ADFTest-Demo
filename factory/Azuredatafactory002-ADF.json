@@ -1,0 +1,19 @@
+{
+	"name": "Azuredatafactory002-ADF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "8895c0f8-44a7-4f54-af6a-8969e780a8ad",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+		"userAssignedIdentities": {
+			"/subscriptions/0b09d9a2-10b0-4bdb-966c-fa3ebfa3ba0a/resourcegroups/TestADF-RG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-user": {
+				"clientId": "af81fd3a-cf41-447c-a1cc-122a8ca70bbf",
+				"principalId": "061d1ce0-5773-44c7-bff1-69341a419f83"
+			},
+			"/subscriptions/0b09d9a2-10b0-4bdb-966c-fa3ebfa3ba0a/resourcegroups/AzureMorning001/providers/Microsoft.ManagedIdentity/userAssignedIdentities/test-user001": {
+				"clientId": "f51af1e6-459d-4394-b08f-2815ca701e15",
+				"principalId": "dbadd028-b7fb-40cc-a254-d29d6a7f4fd6"
+			}
+		}
+	}
+}

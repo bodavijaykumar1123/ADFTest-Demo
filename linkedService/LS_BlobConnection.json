@@ -1,0 +1,12 @@
+{
+	"name": "LS_BlobConnection",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://adfl300newstorageacoount.blob.core.windows.net",
+			"accountKind": "StorageV2"
+		}
+	}
+}

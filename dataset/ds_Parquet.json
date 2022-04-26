@@ -1,0 +1,21 @@
+{
+	"name": "ds_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Azure_gen2_001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "BusinessIndexes",
+				"fileSystem": "refined"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
